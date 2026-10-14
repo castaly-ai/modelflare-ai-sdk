@@ -1,0 +1,51 @@
+{
+  "name": "@modelflare/ai-sdk-provider",
+  "version": "0.1.0",
+  "description": "Modelflare provider for the Vercel AI SDK: one Smart API Key for every model available to your account.",
+  "license": "MIT",
+  "author": "Havenbyte LLC",
+  "homepage": "https://modelflare.dev/sign-up?utm_source=ai-sdk&utm_medium=plugin&utm_campaign=integrations",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/castaly-ai/modelflare-ai-sdk"
+  },
+  "keywords": [
+    "ai",
+    "ai-sdk",
+    "vercel",
+    "modelflare",
+    "provider"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20.3"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "pack:check": "npm run build && npm pack --dry-run"
+  },
+  "dependencies": {
+    "@ai-sdk/openai-compatible": "3.0.68"
+  },
+  "devDependencies": {
+    "@types/node": "25.9.1",
+    "ai": "7.0.138",
+    "esbuild": "0.28.2",
+    "typescript": "6.0.3",
+    "zod": "4.6.7"
+  }
+}

@@ -7,7 +7,7 @@
   "homepage": "https://modelflare.dev/sign-up?utm_source=ai-sdk&utm_medium=plugin&utm_campaign=integrations",
   "repository": {
     "type": "git",
-    "url": "https://github.com/castaly-ai/modelflare-ai-sdk"
+    "url": "git+https://github.com/castaly-ai/modelflare-ai-sdk.git"
   },
   "keywords": [
     "ai",

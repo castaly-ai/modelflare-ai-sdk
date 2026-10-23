@@ -1,6 +1,6 @@
 {
   "name": "@modelflare/ai-sdk-provider",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Modelflare provider for the Vercel AI SDK: one Smart API Key for every model available to your account.",
   "license": "MIT",
   "author": "Havenbyte LLC",

@@ -28,7 +28,7 @@ const { text } = await generateText({
 })
 ```
 
-Model IDs are those your key lists at `GET https://modelflare.dev/v1/models`; new models work without updating this package.
+For text generation, use IDs from `GET https://modelflare.dev/v1/models?scope=authorized&kind=text&endpoint=openai`. The endpoint filter matters because this provider uses the OpenAI-compatible chat protocol. New compatible models work without updating this package.
 
 ```ts
 import { createModelflare } from '@modelflare/ai-sdk-provider'
@@ -46,7 +46,7 @@ const modelflare = createModelflare({
 | `headers` | extra request headers |
 | `fetch` | custom fetch implementation |
 
-Chat models use `modelflare(id)` or `modelflare.chatModel(id)`. OpenAI-compatible image models (not Gemini image models) work with `modelflare.imageModel(id)`. Routing across groups, fallback and the routing strategy are handled by the Smart API Key on the server.
+Chat models use `modelflare(id)` or `modelflare.chatModel(id)`. Image IDs should come from `GET /v1/models?scope=authorized&kind=image&image_route=images`; native Gemini image models use a different protocol and are not handled by `imageModel`. Routing across groups, fallback and the routing strategy are handled by the Smart API Key on the server.
 
 ## Links
 
